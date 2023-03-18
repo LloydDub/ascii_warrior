@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ananas aus Caracas: rot.js tutorial game</title>
+		<title>Se7en: What is in the box?</title>
 		<script src="https://cdn.jsdelivr.net/npm/rot-js@2/dist/rot.js"></script>
 	</head>
 	<body>
-		<h1>Ananas aus Caracas</h1>
+		<h1>Se7en: What is in the box?</h1>
 	</body>
 </html>
 <script>
@@ -152,11 +152,11 @@
 		if (Game.map[key] != "*") {
 			alert("There is no box here!");
 		} else if (key == Game.ananas) {
-			alert("Hooray! You found an ananas and won this game.");
+			alert("You found your wife's head. You lose");
 			Game.engine.lock();
 			window.removeEventListener("keydown", this);
 		} else {
-			alert("This box is empty :-(");
+			alert("This box is empty :-)");
 		}
 	};
 
@@ -188,7 +188,7 @@
 		path.shift();
 		if (path.length == 1) {
 			Game.engine.lock();
-			alert("Game over - you were captured by Pedro!");
+			alert("Game over - you were captured by Kevin Spacey!");
 		} else {
 			x = path[0][0];
 			y = path[0][1];
@@ -200,7 +200,7 @@
 	};
 
 	Pedro.prototype._draw = function () {
-		Game.display.draw(this._x, this._y, "P", "red");
+		Game.display.draw(this._x, this._y, "K", "red");
 	};
 
 	Game.init();
